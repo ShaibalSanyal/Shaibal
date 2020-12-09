@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Iterator;		
 import java.util.Set;
-import org.openqa.selenium.interactions.Actions; 
+ 
 
 public class popupWindow {
 

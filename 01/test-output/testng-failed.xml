@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleAssign.readProp">
+      <class name="SeleAssign.pinCompare">
         <methods>
+          <include name="afterMethod"/>
           <include name="f"/>
           <include name="beforeMethod"/>
-          <include name="afterMethod"/>
         </methods>
-      </class> <!-- SeleAssign.readProp -->
+      </class> <!-- SeleAssign.pinCompare -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

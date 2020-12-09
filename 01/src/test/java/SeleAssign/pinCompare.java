@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Iterator;		
  
 
-public class googleSearch {
+public class pinCompare {
 	
 	WebDriver driver;
 	
@@ -25,41 +25,37 @@ public class googleSearch {
 	  	// Instantiate a ChromeDriver class. 
 	  	driver=new ChromeDriver();
 	  	driver.manage().window().maximize();
-	  	driver.get("https://www.google.com/");
+	  	driver.get("http://chennaiiq.com/chennai/pincode-by-name.php");
 	  	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	  	
 	  }
 	  
 	  @Test
 	  public void f() throws InterruptedException {
-		  
-		  String textToBeSearched = "selenium tutorial";
-		  
-		  driver.findElement(By.xpath("//input[contains(@class,'gLFyf gsfi')]")).sendKeys("seleni");
-		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		  Thread.sleep(2000);
-		  WebElement list = driver.findElement(By.xpath("//ul[@class='erkvQe']"));
-			// Getting all the suggestions listed in list
-			List<WebElement> suggestions = list.findElements(By.tagName("li"));
-			//System.out.println(suggestions.size());
-			Iterator<WebElement> ite = suggestions.iterator();
-			
-			while (ite.hasNext()) {
-
-				WebElement suggestion = ite.next();
-				if (suggestion.getText().toLowerCase().trim().equals(textToBeSearched)) {
-					suggestion.click();
-					break;
-				}
-			}
-			Thread.sleep(2000);
+		  		  
+		  List<WebElement> pinNumber = driver.findElements(By.xpath("/html/body/table/tbody/tr[3]/td[2]/table[1]/tbody/tr/td[3]"));
+		  int count = 0;
+		  for(int i=1;i<(pinNumber.size()-1);i++) {
+			  for(int j=i+1;j<=(pinNumber.size()-i);j++) {
+				 if(pinNumber.get(i).getText().contentEquals(pinNumber.get(j).getText())){
+					 System.out.println("Duplicate pin code present");
+					 count+=1;
+				 }
+				 if(count>0) {
+					 break;
+				 }
+			  }			  
+			  if(count>0) {
+				  break;
+			  }
+		  }
 	  }
 	  
 
 
 	  @AfterMethod
 	  public void afterMethod() {
-		  driver.close();
+		  //driver.close();
 	  }  
 
 }
