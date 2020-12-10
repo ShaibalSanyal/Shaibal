@@ -50,6 +50,7 @@ public class newTabTest {
 		  
 		  driver.findElement(By.id("topnavbtn_references")).click();
 		  driver.findElement(By.linkText("HTML Tag Reference")).click();
+		  Thread.sleep(2000);
 	  }
 	  
 

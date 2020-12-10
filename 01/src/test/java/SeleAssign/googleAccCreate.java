@@ -64,7 +64,7 @@ public class googleAccCreate {
 		  Thread.sleep(3000);
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		  driver.findElement(By.xpath("//input[contains(@class,'whsOnd zHQkBf')]")).sendKeys("7305528486");
-		  		 
+		  Thread.sleep(2000);		 
 	  }
 	  
 

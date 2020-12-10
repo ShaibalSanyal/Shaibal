@@ -1,14 +1,10 @@
 package SeleAssign;
 
-import static org.junit.Assert.assertTrue;
-import java.awt.List;
-import java.time.Duration;
+
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;  
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Iterator;		
 import java.util.Set;

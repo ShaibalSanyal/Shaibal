@@ -6,19 +6,12 @@ import org.testng.annotations.AfterMethod;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Iterator;		
+import org.openqa.selenium.chrome.ChromeDriver;		
  
 
-public class inputText {
+public class findBrokenLink {
 	
 	WebDriver driver;
 	

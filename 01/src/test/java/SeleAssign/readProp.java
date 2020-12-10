@@ -50,6 +50,6 @@ public class readProp {
 
 	  @AfterMethod
 	  public void afterMethod() {
-		  driver.close();
+		  //driver.close();
 	  }
 }

@@ -1,21 +1,19 @@
 package SeleAssign;
 
-import static org.junit.Assert.assertTrue;
 
-import java.awt.List;
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.openqa.selenium.By;  
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+
 
 
 public class AppTest 
 {
         @Test
-    public void browserControl()
+    public void browserControl() throws InterruptedException
     {
         	// Defining System Property for the ChromeDriver 
         	System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaibal_sanyal\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -30,7 +28,7 @@ public class AppTest
         	
         	//Handle dropdown
         	driver.findElement(By.xpath("//button[contains(@class,'multiselect')]")).click();
-        	
+        	Thread.sleep(3000);
         	driver.close();
     }
         
